@@ -42,6 +42,9 @@ namespace CharacterEditor
                 lblArmor.Content = currentCharacter.Armor;
                 lblWeight.Content = currentCharacter.Weight;
                 lblPoints.Content = currentCharacter.CharPoints;
+                lblLvl.Content = currentCharacter.Level;
+                lblCurrenExp.Content = currentCharacter.CurrentExp;
+                lblNeedExp.Content = currentCharacter.NeededExpirience;
             }
 
         }
@@ -54,6 +57,13 @@ namespace CharacterEditor
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             currentCharacter.StrenghtDecrease(ref lblHealth, ref lblStr, ref lblWeight, ref lblPDamage, ref lblArmor, ref lblPoints);
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            currentCharacter.ExpGain(100);
+            lblNeedExp.Content = currentCharacter.NeededExpirience;
+            lblCurrenExp.Content = currentCharacter.CurrentExp;
         }
     }
 }

@@ -22,11 +22,14 @@ namespace CharacterEditor
 
 
         internal int _currentCharPoints;
+        internal int _currentExpirience;
+        internal int _neededExpirience;
 
         public int MaxCharPoints => 5 * _level;
         public Character(string name, string characterClass, int strength, int dexterity, int intelligence, int constitution)
         {
             _level = 1;
+            _currentExpirience = 0;
             _name = name;
             _characterClass = characterClass;
             _strength = strength;

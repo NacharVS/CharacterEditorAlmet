@@ -24,10 +24,15 @@ namespace CharacterEditor
         public int Constitution { get; set; }
         public int CharPoints { get; set; }
 
+        public int NeededExpirience { get; }
+        public int CurrentExp { get; }
+
 
 
         public void StrenghtIncrease(ref Label health, ref Label strengtn, ref Label weight, ref Label pDamage, ref Label armor, ref Label points);
         public void StrenghtDecrease(ref Label health, ref Label strengtn, ref Label weight, ref Label pDamage, ref Label armor, ref Label points);
+
+        public void ExpGain(int exp);
 
     }
 }

@@ -49,5 +49,11 @@
         </ComboBox>
         <Label Content="Armor" HorizontalAlignment="Left" Margin="373,82,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblArmor" Content="0" HorizontalAlignment="Left" Margin="434,82,0,0" VerticalAlignment="Top"/>
+        <Label Content="Level" HorizontalAlignment="Left" Margin="458,8,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblLvl" Content="0" HorizontalAlignment="Left" Margin="506,10,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblCurrenExp" Content="0" HorizontalAlignment="Left" Margin="542,10,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblNeedExp" Content="0" HorizontalAlignment="Left" Margin="574,10,0,0" VerticalAlignment="Top"/>
+        <Button Content="+100" HorizontalAlignment="Left" Margin="476,54,0,0" VerticalAlignment="Top" Click="Button_Click_2"/>
+        <Button Content="+500" HorizontalAlignment="Left" Margin="476,83,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

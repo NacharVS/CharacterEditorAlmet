@@ -150,6 +150,9 @@ namespace CharacterEditor
         public override int MinConstitution => 25;
 
         public int Level { get => _level; set => _level = value; }
+        public int NeededExpirience => _neededExpirience;
+
+        public int CurrentExp => _currentExpirience;
 
         public static ICharacter CreateWarrior(string name)
         {
@@ -185,6 +188,17 @@ namespace CharacterEditor
                 points.Content = CharPoints.ToString();
             }
 
+        }
+
+        public void ExpGain(int exp)
+        {
+            _currentExpirience += exp; 
+            if(_currentExpirience >= NeededExpirience)
+            {
+                Level++;
+                _currentCharPoints += 5;
+                _neededExpirience += (Level - 1) * 1000;
+            }
         }
     }
 }
