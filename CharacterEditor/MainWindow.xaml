@@ -7,25 +7,25 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBox HorizontalAlignment="Left" Margin="132,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="121"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="132,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="121"/>
         <Label Content="Name" Margin="10,10,697,398"/>
 
         <Label Content="Strength" HorizontalAlignment="Left" Margin="19,51,0,0" VerticalAlignment="Top"/>
-        <Button Content="-" HorizontalAlignment="Left" Margin="95,57,0,0" VerticalAlignment="Top" Width="25"/>
-        <Button Content="+" HorizontalAlignment="Left" Margin="149,57,0,0" VerticalAlignment="Top" Width="25"/>
-        <Label Content="0" HorizontalAlignment="Left" Margin="125,54,0,0" VerticalAlignment="Top"/>
+        <Button Content="-" HorizontalAlignment="Left" Margin="95,57,0,0" VerticalAlignment="Top" Width="25" Click="Button_Click_1"/>
+        <Button Content="+" HorizontalAlignment="Left" Margin="149,57,0,0" VerticalAlignment="Top" Width="25" Click="Button_Click"/>
+        <Label x:Name="lblStr" Content="0" HorizontalAlignment="Left" Margin="125,54,0,0" VerticalAlignment="Top"/>
         <Label Content="Dexterity" HorizontalAlignment="Left" Margin="19,82,0,0" VerticalAlignment="Top"/>
         <Button Content="-" HorizontalAlignment="Left" Margin="95,88,0,0" VerticalAlignment="Top" Width="25"/>
         <Button Content="+" HorizontalAlignment="Left" Margin="149,88,0,0" VerticalAlignment="Top" Width="25"/>
-        <Label Content="0" HorizontalAlignment="Left" Margin="125,85,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblDex" Content="0" HorizontalAlignment="Left" Margin="125,85,0,0" VerticalAlignment="Top"/>
         <Label Content="Intelligence" HorizontalAlignment="Left" Margin="19,113,0,0" VerticalAlignment="Top"/>
         <Button Content="-" HorizontalAlignment="Left" Margin="95,119,0,0" VerticalAlignment="Top" Width="25"/>
         <Button Content="+" HorizontalAlignment="Left" Margin="149,119,0,0" VerticalAlignment="Top" Width="25"/>
-        <Label Content="0" HorizontalAlignment="Left" Margin="125,116,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblInt" Content="0" HorizontalAlignment="Left" Margin="125,116,0,0" VerticalAlignment="Top"/>
         <Label Content="Constitution" HorizontalAlignment="Left" Margin="20,144,0,0" VerticalAlignment="Top"/>
         <Button Content="-" HorizontalAlignment="Left" Margin="95,150,0,0" VerticalAlignment="Top" Width="25"/>
         <Button Content="+" HorizontalAlignment="Left" Margin="149,150,0,0" VerticalAlignment="Top" Width="25"/>
-        <Label Content="0" HorizontalAlignment="Left" Margin="125,147,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblCon" Content="0" HorizontalAlignment="Left" Margin="125,147,0,0" VerticalAlignment="Top"/>
         <Label Content="Health" HorizontalAlignment="Left" Margin="253,51,0,0" VerticalAlignment="Top"/>
         <Label Content="0" HorizontalAlignment="Left" Margin="303,51,0,0" VerticalAlignment="Top"/>
         <Label Content="Energy" HorizontalAlignment="Left" Margin="334,51,0,0" VerticalAlignment="Top"/>
@@ -42,7 +42,7 @@
         <Label Content="0" HorizontalAlignment="Left" Margin="325,186,0,0" VerticalAlignment="Top"/>
         <Label Content="BonusPoints" HorizontalAlignment="Left" Margin="27,191,0,0" VerticalAlignment="Top"/>
         <Label Content="0" HorizontalAlignment="Left" Margin="108,191,0,0" VerticalAlignment="Top"/>
-        <ComboBox HorizontalAlignment="Left" Margin="303,10,0,0" VerticalAlignment="Top" Width="120" Height="18">
+        <ComboBox x:Name="chrctChoosing" HorizontalAlignment="Left" Margin="303,10,0,0" VerticalAlignment="Top" Width="120" Height="18" SelectionChanged="ComboBox_SelectionChanged">
             <ComboBoxItem Content="Warrior"/>
             <ComboBoxItem Content="Archer"/>
             <ComboBoxItem Content="Mage"/>

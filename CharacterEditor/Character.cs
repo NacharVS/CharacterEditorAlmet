@@ -10,7 +10,7 @@ namespace CharacterEditor
     {
         private string _name;
         private string _characterClass;
-        private int _health;
+        internal int _health;
         internal int _energy;
         internal int _strength;
         internal int _dexterity;

@@ -12,7 +12,10 @@ namespace CharacterEditor
         {
         }
 
-        public int Health { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int Health 
+        {
+            get => _strength * 3 + _constitution * 10;
+            set => _health = value; }
         public int Energy
         {
             get
@@ -44,9 +47,66 @@ namespace CharacterEditor
                     _strength = value;
             }
         }
-        public int Dexterity { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int Intelligence { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int Constitution { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int Dexterity 
+        {
+            get
+            {
+                return _dexterity;
+            }
+            set
+            {
+                if (value < MinDexterity)
+                {
+                    _dexterity = MinDexterity;
+                }
+                else if (value > MaxDexterity)
+                {
+                    _dexterity = MaxDexterity;
+                }
+                else
+                    _dexterity = value;
+            }
+        }
+        public int Intelligence 
+        {
+            get
+            {
+                return _intelligence;
+            }
+            set
+            {
+                if (value < MinIntelligence)
+                {
+                    _intelligence = MinIntelligence;
+                }
+                else if (value > MaxIntelligence)
+                {
+                    _intelligence = MaxIntelligence;
+                }
+                else
+                    _intelligence = value;
+            }
+        }
+        public int Constitution 
+        {
+            get
+            {
+                return _constitution;
+            }
+            set
+            {
+                if (value < MinConstitution)
+                {
+                    _constitution = MinConstitution;
+                }
+                else if (value > MaxConstitution)
+                {
+                    _constitution = MaxConstitution;
+                }
+                else
+                    _constitution = value;
+            }
+        }
 
         public override int MaxStrenght => 250;
         public override int MinStrenght => 30;
@@ -56,6 +116,11 @@ namespace CharacterEditor
         public override int MinIntelligence => 10;
         public override int MaxConstitution => 100;
         public override int MinConstitution => 25;
+
+        public static ICharacter CreateWarrior(string name)
+        {
+            return new Warrior(name, 30, 15, 10, 20);
+        }
 
     }
 }

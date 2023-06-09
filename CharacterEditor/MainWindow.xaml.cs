@@ -20,9 +20,36 @@ namespace CharacterEditor
     /// </summary>
     public partial class MainWindow : Window
     {
+        ICharacter currentCharacter;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+            if (chrctChoosing.SelectedIndex == 0)
+            {
+                currentCharacter = Warrior.CreateWarrior(txtName.Text);
+                lblStr.Content = currentCharacter.Strength;
+                lblDex.Content = currentCharacter.Dexterity;
+                lblInt.Content = currentCharacter.Intelligence;
+                lblCon.Content = currentCharacter.Constitution;
+            }
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            currentCharacter.Strength += 1;
+            lblStr.Content = currentCharacter.Strength;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            currentCharacter.Strength -= 1;
+            lblStr.Content = currentCharacter.Strength;
         }
     }
 }
