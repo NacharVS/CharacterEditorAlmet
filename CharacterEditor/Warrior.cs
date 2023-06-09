@@ -107,7 +107,20 @@ namespace CharacterEditor
                     _constitution = value;
             }
         }
+        public int Weight 
+        { 
+            get => _strength * 10 + _constitution * 5; 
+        }
+        public int PhysDamage 
+        { 
+            get => _strength * 5 + _dexterity; 
+        }
+        public int Armor 
+        { 
+            get => _strength * 1 + _dexterity * 3 + _constitution * 2; 
+        }
 
+        //Getters
         public override int MaxStrenght => 250;
         public override int MinStrenght => 30;
         public override int MaxDexterity => 80;
@@ -116,6 +129,8 @@ namespace CharacterEditor
         public override int MinIntelligence => 10;
         public override int MaxConstitution => 100;
         public override int MinConstitution => 25;
+
+        
 
         public static ICharacter CreateWarrior(string name)
         {

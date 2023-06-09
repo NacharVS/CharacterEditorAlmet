@@ -27,11 +27,11 @@
         <Button Content="+" HorizontalAlignment="Left" Margin="149,150,0,0" VerticalAlignment="Top" Width="25"/>
         <Label x:Name="lblCon" Content="0" HorizontalAlignment="Left" Margin="125,147,0,0" VerticalAlignment="Top"/>
         <Label Content="Health" HorizontalAlignment="Left" Margin="253,51,0,0" VerticalAlignment="Top"/>
-        <Label Content="0" HorizontalAlignment="Left" Margin="303,51,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblHealth" Content="0" HorizontalAlignment="Left" Margin="303,51,0,0" VerticalAlignment="Top"/>
         <Label Content="Energy" HorizontalAlignment="Left" Margin="334,51,0,0" VerticalAlignment="Top"/>
-        <Label Content="0" HorizontalAlignment="Left" Margin="384,51,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblEnegry" Content="0" HorizontalAlignment="Left" Margin="384,51,0,0" VerticalAlignment="Top"/>
         <Label Content="P. Damage" HorizontalAlignment="Left" Margin="253,82,0,0" VerticalAlignment="Top"/>
-        <Label Content="0" HorizontalAlignment="Left" Margin="325,82,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblPDamage" Content="0" HorizontalAlignment="Left" Margin="325,82,0,0" VerticalAlignment="Top"/>
         <Label Content="M. Damage" HorizontalAlignment="Left" Margin="253,111,0,0" VerticalAlignment="Top"/>
         <Label Content="0" HorizontalAlignment="Left" Margin="325,111,0,0" VerticalAlignment="Top"/>
         <Label Content="CritChance" HorizontalAlignment="Left" Margin="253,134,0,0" VerticalAlignment="Top"/>
@@ -39,7 +39,7 @@
         <Label Content="CritDamage" HorizontalAlignment="Left" Margin="253,160,0,0" VerticalAlignment="Top"/>
         <Label Content="0" HorizontalAlignment="Left" Margin="325,160,0,0" VerticalAlignment="Top"/>
         <Label Content="Weight" HorizontalAlignment="Left" Margin="253,186,0,0" VerticalAlignment="Top"/>
-        <Label Content="0" HorizontalAlignment="Left" Margin="325,186,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblWeight" Content="0" HorizontalAlignment="Left" Margin="325,186,0,0" VerticalAlignment="Top"/>
         <Label Content="BonusPoints" HorizontalAlignment="Left" Margin="27,191,0,0" VerticalAlignment="Top"/>
         <Label Content="0" HorizontalAlignment="Left" Margin="108,191,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="chrctChoosing" HorizontalAlignment="Left" Margin="303,10,0,0" VerticalAlignment="Top" Width="120" Height="18" SelectionChanged="ComboBox_SelectionChanged">
@@ -47,5 +47,7 @@
             <ComboBoxItem Content="Archer"/>
             <ComboBoxItem Content="Mage"/>
         </ComboBox>
+        <Label Content="Armor" HorizontalAlignment="Left" Margin="373,82,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblArmor" Content="0" HorizontalAlignment="Left" Margin="434,82,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

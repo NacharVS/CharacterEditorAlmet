@@ -36,6 +36,11 @@ namespace CharacterEditor
                 lblDex.Content = currentCharacter.Dexterity;
                 lblInt.Content = currentCharacter.Intelligence;
                 lblCon.Content = currentCharacter.Constitution;
+                lblHealth.Content = currentCharacter.Health;
+                lblEnegry.Content = currentCharacter.Energy;
+                lblPDamage.Content = currentCharacter.PhysDamage;
+                lblArmor.Content = currentCharacter.Armor;
+                lblWeight.Content = currentCharacter.Weight;
             }
 
         }
@@ -44,12 +49,20 @@ namespace CharacterEditor
         {
             currentCharacter.Strength += 1;
             lblStr.Content = currentCharacter.Strength;
+            lblHealth.Content = currentCharacter.Health;
+            lblPDamage.Content = currentCharacter.PhysDamage;
+            lblArmor.Content = currentCharacter.Armor;
+            lblWeight.Content = currentCharacter.Weight;
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             currentCharacter.Strength -= 1;
             lblStr.Content = currentCharacter.Strength;
+            lblHealth.Content = currentCharacter.Health;
+            lblPDamage.Content = currentCharacter.PhysDamage;
+            lblArmor.Content = currentCharacter.Armor;
+            lblWeight.Content = currentCharacter.Weight;
         }
     }
 }
