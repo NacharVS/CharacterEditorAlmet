@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CharacterEditor.Arsenal;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,9 +22,15 @@ namespace CharacterEditor
     public partial class MainWindow : Window
     {
         ICharacter currentCharacter;
+
+        List<Weapon> weapons;
         public MainWindow()
         {
             InitializeComponent();
+            weapons = new List<Weapon>()
+            {
+                new Club(), new IronSword(),new SilverAxe()
+            };
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -64,6 +71,26 @@ namespace CharacterEditor
             currentCharacter.ExpGain(100);
             lblNeedExp.Content = currentCharacter.NeededExpirience;
             lblCurrenExp.Content = currentCharacter.CurrentExp;
+        }
+
+        private void lBoxWeapons_Loaded(object sender, RoutedEventArgs e)
+        {
+            foreach (var item in weapons)
+            {
+                lBoxWeapons.Items.Add(item.WeaponType);
+            }
+        }
+
+        private void lBoxWeapons_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            switch (lBoxWeapons.SelectedItem.ToString())
+            {
+                case "Club":
+                    { 
+                        lblPDamage.Content = (int.Parse(lblPDamage.Content.ToString()) + weapons[0].Damage).ToString();
+                    }
+                    break;
+            }
         }
     }
 }

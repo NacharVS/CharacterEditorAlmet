@@ -19,8 +19,13 @@ namespace CharacterEditor.Arsenal
 
         private int _strength;
 
-        public Weapon(string weaponType, int damage, int strength, int dexterity, int constitution, int strReq, int dexReq, int weightReq) : this(weaponType, damage, strength, dexterity, constitution)
+        public Weapon(string weaponType, int damage, int strength, int dexterity, int constitution, int strReq, int dexReq, int weightReq)
         {
+            WeaponType = weaponType;
+            _damage = damage;
+            _strength = strength;
+            Dexterity = dexterity;
+            Constitution = constitution;
             StrReq = strReq;
             DexReq = dexReq;
             WeightReq = weightReq;

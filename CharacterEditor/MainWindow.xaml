@@ -55,6 +55,6 @@
         <Label x:Name="lblNeedExp" Content="0" HorizontalAlignment="Left" Margin="574,10,0,0" VerticalAlignment="Top"/>
         <Button Content="+100" HorizontalAlignment="Left" Margin="476,54,0,0" VerticalAlignment="Top" Click="Button_Click_2"/>
         <Button Content="+500" HorizontalAlignment="Left" Margin="476,83,0,0" VerticalAlignment="Top"/>
-        <ListBox d:ItemsSource="{d:SampleData ItemCount=5}" Margin="690,15,19,326"/>
+        <ListBox x:Name="lBoxWeapons" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="690,15,19,326" Loaded="lBoxWeapons_Loaded" SelectionChanged="lBoxWeapons_SelectionChanged"/>
     </Grid>
 </Window>
