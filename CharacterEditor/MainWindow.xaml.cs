@@ -41,28 +41,19 @@ namespace CharacterEditor
                 lblPDamage.Content = currentCharacter.PhysDamage;
                 lblArmor.Content = currentCharacter.Armor;
                 lblWeight.Content = currentCharacter.Weight;
+                lblPoints.Content = 5 * currentCharacter.Level;
             }
 
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            currentCharacter.Strength += 1;
-            lblStr.Content = currentCharacter.Strength;
-            lblHealth.Content = currentCharacter.Health;
-            lblPDamage.Content = currentCharacter.PhysDamage;
-            lblArmor.Content = currentCharacter.Armor;
-            lblWeight.Content = currentCharacter.Weight;
+        {          
+            currentCharacter.StrenghtIncrease(ref lblHealth, ref lblStr, ref lblWeight, ref lblPDamage, ref lblArmor, ref  lblPoints);
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            currentCharacter.Strength -= 1;
-            lblStr.Content = currentCharacter.Strength;
-            lblHealth.Content = currentCharacter.Health;
-            lblPDamage.Content = currentCharacter.PhysDamage;
-            lblArmor.Content = currentCharacter.Armor;
-            lblWeight.Content = currentCharacter.Weight;
+            currentCharacter.StrenghtDecrease(ref lblHealth, ref lblStr, ref lblWeight, ref lblPDamage, ref lblArmor, ref lblPoints);
         }
     }
 }

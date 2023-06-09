@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace CharacterEditor
 {
@@ -130,12 +131,42 @@ namespace CharacterEditor
         public override int MaxConstitution => 100;
         public override int MinConstitution => 25;
 
-        
+        public int Level { get => _level; set => _level = value; }
 
         public static ICharacter CreateWarrior(string name)
         {
             return new Warrior(name, 30, 15, 10, 20);
         }
 
+        public void StrenghtIncrease(ref Label health, ref Label strengtn, ref Label weight, ref Label pDamage, ref Label armor, ref Label points)
+        {
+            if(CharPoints > 0)
+            {
+                Strength++;
+                CharPoints--;
+                health.Content = Health.ToString();
+                strengtn.Content = Strength.ToString();
+                weight.Content = Weight.ToString();
+                pDamage.Content = PhysDamage.ToString();
+                armor.Content = Armor.ToString();
+                points.Content = CharPoints.ToString();
+            }
+
+        }
+        public void StrenghtDecrease(ref Label health, ref Label strengtn, ref Label weight, ref Label pDamage, ref Label armor, ref Label points)
+        {
+            if (CharPoints <= MaxCharPoints)
+            {
+                Strength--;
+                CharPoints++;
+                health.Content = Health.ToString();
+                strengtn.Content = Strength.ToString();
+                weight.Content = Weight.ToString();
+                pDamage.Content = PhysDamage.ToString();
+                armor.Content = Armor.ToString();
+                points.Content = CharPoints.ToString();
+            }
+
+        }
     }
 }

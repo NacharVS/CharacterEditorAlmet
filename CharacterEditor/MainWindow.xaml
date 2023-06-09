@@ -41,7 +41,7 @@
         <Label Content="Weight" HorizontalAlignment="Left" Margin="253,186,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblWeight" Content="0" HorizontalAlignment="Left" Margin="325,186,0,0" VerticalAlignment="Top"/>
         <Label Content="BonusPoints" HorizontalAlignment="Left" Margin="27,191,0,0" VerticalAlignment="Top"/>
-        <Label Content="0" HorizontalAlignment="Left" Margin="108,191,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblPoints" Content="0" HorizontalAlignment="Left" Margin="108,191,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="chrctChoosing" HorizontalAlignment="Left" Margin="303,10,0,0" VerticalAlignment="Top" Width="120" Height="18" SelectionChanged="ComboBox_SelectionChanged">
             <ComboBoxItem Content="Warrior"/>
             <ComboBoxItem Content="Archer"/>
