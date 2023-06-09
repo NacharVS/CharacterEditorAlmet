@@ -121,6 +121,24 @@ namespace CharacterEditor
             get => _strength * 1 + _dexterity * 3 + _constitution * 2; 
         }
 
+        public int CharPoints
+        {
+            get => _currentCharPoints;
+            set
+            {
+                if (value > MaxCharPoints)
+                {
+                    _currentCharPoints = MaxCharPoints * _level;
+                }
+                else if (value < 0)
+                {
+                    _currentCharPoints = 0;
+                }
+                else
+                    _currentCharPoints = value;
+            }
+        }
+
         //Getters
         public override int MaxStrenght => 250;
         public override int MinStrenght => 30;

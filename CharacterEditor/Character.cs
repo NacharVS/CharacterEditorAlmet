@@ -19,13 +19,14 @@ namespace CharacterEditor
         internal int _dexterity;
         internal int _intelligence;
         internal int _constitution;
-        
 
-        private int _currentCharPoints;
+
+        internal int _currentCharPoints;
 
         public int MaxCharPoints => 5 * _level;
         public Character(string name, string characterClass, int strength, int dexterity, int intelligence, int constitution)
         {
+            _level = 1;
             _name = name;
             _characterClass = characterClass;
             _strength = strength;
@@ -33,7 +34,7 @@ namespace CharacterEditor
             _intelligence = intelligence;
             _constitution = constitution;
             _currentCharPoints = MaxCharPoints;
-            _level = 1;
+
         }
 
         public virtual int MaxStrenght { get;}
@@ -44,22 +45,6 @@ namespace CharacterEditor
         public virtual int MinIntelligence { get; }
         public virtual int MaxConstitution { get; }
         public virtual int MinConstitution { get; }
-        public int CharPoints 
-        { 
-            get => _currentCharPoints;
-            set 
-            {
-                if (value > MaxCharPoints)
-                {
-                    _currentCharPoints = MaxCharPoints * _level;
-                }
-                else if (value < 0)
-                {
-                    _currentCharPoints = 0;
-                }
-                else
-                    _currentCharPoints = value;
-            }
-        }
+
     }
 }

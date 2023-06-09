@@ -22,6 +22,7 @@ namespace CharacterEditor
         public int Dexterity { get; set; }
         public int Intelligence { get; set; }
         public int Constitution { get; set; }
+        public int CharPoints { get; set; }
 
 
 

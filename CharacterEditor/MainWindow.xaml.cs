@@ -41,7 +41,7 @@ namespace CharacterEditor
                 lblPDamage.Content = currentCharacter.PhysDamage;
                 lblArmor.Content = currentCharacter.Armor;
                 lblWeight.Content = currentCharacter.Weight;
-                lblPoints.Content = 5 * currentCharacter.Level;
+                lblPoints.Content = currentCharacter.CharPoints;
             }
 
         }
